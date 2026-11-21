@@ -1,0 +1,12 @@
+{
+  "fps": 30,
+  "transition": 30,
+  "scenes": [
+    {"id": "hook", "frames": 270, "text": "If your score is 5 or higher, you are at high risk of developing prediabetes. Let's look at what that means."},
+    {"id": "prevalence", "frames": 540, "text": "Prediabetes is common. About 98 million American adults, more than one in three, have it, and most don't know. The risk score runs from zero to ten, and five or higher is the high-risk zone."},
+    {"id": "insulin", "frames": 600, "text": "Here's what happens inside the body. Insulin unlocks your cells so sugar can move in. With insulin resistance, cells stop responding, so the pancreas makes more insulin. Over time it can't keep up, and blood sugar rises."},
+    {"id": "risk", "frames": 690, "text": "Risk scores add up common risk factors, such as age, family history, excess weight, low physical activity, high blood pressure, a history of gestational diabetes, abnormal cholesterol, and polycystic ovary syndrome. The more of these you have, the more important it is to get tested."},
+    {"id": "diagnostics", "frames": 750, "text": "Only a blood test can confirm prediabetes. A fasting glucose of 100 to 125 milligrams per decilitre, an A1C of 5.7 to 6.4 percent, or a two-hour glucose tolerance result of 140 to 199, all fall in the prediabetes range. Normal is below those values, and diabetes begins at 126, 6.5 percent, and 200."},
+    {"id": "prevention", "frames": 1400, "text": "The good news: prediabetes can often be reversed. In the Diabetes Prevention Program, lifestyle changes cut the risk of developing type 2 diabetes by fifty-eight percent. The goals were about seven percent weight loss, and one hundred fifty minutes of brisk activity a week. Eat more vegetables, whole grains and lean protein, cut back on sugary drinks, sleep well, and don't smoke. If your score is five or higher, talk to your doctor about a blood test. This video is for education, not diagnosis. Sources are listed on screen and on the page."}
+  ]
+}

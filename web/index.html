@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Know Your Score: Prediabetes Risk Awareness</title>
+<meta name="description" content="If your score is 5 or higher, you are at high risk of developing prediabetes. Learn what the score means, the blood sugar ranges doctors use, and how to lower your risk.">
+<style>
+  :root{
+    --bg:#f4f8fb; --surface:#ffffff; --text:#0b1f33; --muted:#516478; --line:#dbe5ee;
+    --teal:#0f9f93; --coral:#d6365e; --amber:#b87a00; --green:#0a9a6e;
+    --n:#e3f7f0; --p:#fff2d6; --d:#fde3ea; --shadow:0 10px 30px rgba(11,31,51,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#07152b; --surface:#0d2542; --text:#eef5fb; --muted:#9db4cc; --line:#1f3b5c;
+      --n:#0c3a37; --p:#4a3a0c; --d:#4a1626; --shadow:none; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 "DejaVu Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .hook{background:linear-gradient(135deg,#07152b,#0b3550);color:#fff;padding:56px 0 48px}
+  .hook small{letter-spacing:.2em;font-weight:700;color:#2ec4b6;font-size:.78rem}
+  .hook h1{font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.15;margin:.5rem 0 1rem}
+  .hook h1 em{font-style:normal;color:#ff7a97}
+  .hook p{max-width:640px;color:#c9d9e8;margin:0}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:28px 0}
+  video{width:100%;border-radius:14px;background:#000;display:block}
+  .fallback{color:var(--muted);font-size:.92rem;margin:.8rem 0 0}
+  h2{font-size:1.6rem;margin:0 0 .4rem}
+  .scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:680px}
+  th,td{padding:.8rem .9rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th[scope=row]{font-weight:700}
+  th.n,td.n{background:var(--n)} th.p,td.p{background:var(--p)} th.d,td.d{background:var(--d)}
+  td small,th small{display:block;color:var(--muted);font-weight:400}
+  sup a{text-decoration:none;color:var(--teal);font-weight:700}
+  .note{color:var(--muted);font-size:.92rem}
+  ol.refs{padding-left:1.3rem} ol.refs li{margin:.6rem 0}
+  a{color:var(--teal)} a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+  .callout{border-left:6px solid var(--coral);background:var(--d);padding:14px 18px;border-radius:10px;font-weight:700}
+  footer{color:var(--muted);font-size:.9rem;padding:10px 0 50px}
+  .sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+
+<header class="hook">
+  <div class="wrap">
+    <small>PREDIABETES AWARENESS</small>
+    <h1>If your score is <em>5 or higher</em>, you are at high risk of developing prediabetes.</h1>
+    <p>Watch the two-minute explainer, check the blood sugar ranges doctors use, and learn what you can do next.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card" aria-labelledby="video-h">
+    <h2 id="video-h">Watch: what your score means</h2>
+    <!-- After the GitHub run, download metabolic-master.mp4 from the "metabolic-master-render" artifact
+         and place it in this folder (web/metabolic-master.mp4). -->
+    <video controls preload="metadata" playsinline>
+      <source src="metabolic-master.mp4" type="video/mp4">
+      Your browser does not support embedded video.
+    </video>
+    <p class="fallback">Video not showing? Place <code>metabolic-master.mp4</code> next to this page.</p>
+  </section>
+
+  <section class="card" aria-labelledby="ranges-h">
+    <h2 id="ranges-h">Blood sugar ranges used to define prediabetes</h2>
+    <p>A risk score of <strong>5 or higher</strong> (out of 10) means you are at high risk<sup><a href="#r1">[1]</a></sup>.
+       Only a blood test can show whether your blood sugar is in the prediabetes range<sup><a href="#r5">[5]</a></sup>:</p>
+    <div class="scroll">
+    <table>
+      <caption class="sr">Blood test ranges for normal, prediabetes and diabetes</caption>
+      <thead><tr><th>Test</th><th class="n">Normal</th><th class="p">Prediabetes</th><th class="d">Diabetes</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Fasting plasma glucose<small>no food for at least 8 hours</small></th>
+            <td class="n">below 100 mg/dL<small>below 5.6 mmol/L</small></td>
+            <td class="p">100–125 mg/dL<small>5.6–6.9 mmol/L</small></td>
+            <td class="d">126 mg/dL or higher<small>7.0 mmol/L or higher</small></td></tr>
+        <tr><th scope="row">A1C<small>average over about 3 months</small></th>
+            <td class="n">below 5.7%<small>below 39 mmol/mol</small></td>
+            <td class="p">5.7–6.4%<small>39–47 mmol/mol</small></td>
+            <td class="d">6.5% or higher<small>48 mmol/mol or higher</small></td></tr>
+        <tr><th scope="row">2-hour glucose tolerance test<small>75 g oral glucose load</small></th>
+            <td class="n">below 140 mg/dL<small>below 7.8 mmol/L</small></td>
+            <td class="p">140–199 mg/dL<small>7.8–11.0 mmol/L</small></td>
+            <td class="d">200 mg/dL or higher<small>11.1 mmol/L or higher</small></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Ranges follow the American Diabetes Association<sup><a href="#r5">[5]</a></sup>. Some organisations, including the WHO, set the lower limit of impaired fasting glucose at 110 mg/dL (6.1 mmol/L). A1C can be unreliable in anaemia or haemoglobin variants. Abnormal results should be confirmed by repeat testing and interpreted by a doctor.</p>
+  </section>
+
+  <section class="card" aria-labelledby="prev-h">
+    <h2 id="prev-h">Prediabetes can often be reversed</h2>
+    <p>About 98 million U.S. adults, more than 1 in 3, have prediabetes, and more than 80% of them do not know it<sup><a href="#r1">[1]</a></sup>.
+       In the Diabetes Prevention Program, intensive lifestyle change (a goal of about 7% weight loss and 150 minutes of brisk activity a week)
+       reduced the risk of developing type 2 diabetes by 58%<sup><a href="#r3">[3]</a><a href="#r4">[4]</a></sup>.</p>
+    <p class="callout">Score of 5 or higher? Ask your doctor about a blood test, and about a recognised lifestyle change programme<sup><a href="#r2">[2]</a></sup>.</p>
+  </section>
+
+  <section class="card" aria-labelledby="refs-h">
+    <h2 id="refs-h">References</h2>
+    <ol class="refs">
+      <li id="r1">Centers for Disease Control and Prevention. <em>Prediabetes Risk Test</em> and <em>About the Prediabetes Risk Test</em>.
+        <a href="https://www.cdc.gov/prediabetes/risktest/about-the-test.html" rel="noopener">cdc.gov/prediabetes/risktest/about-the-test.html</a></li>
+      <li id="r2">Centers for Disease Control and Prevention. <em>National Diabetes Prevention Program: Prediabetes, your chance to prevent type 2 diabetes</em>.
+        <a href="https://www.cdc.gov/diabetes/prevention-type-2/prediabetes-prevent-type-2.html" rel="noopener">cdc.gov/diabetes/prevention-type-2</a></li>
+      <li id="r3">Diabetes Prevention Program Research Group. The Diabetes Prevention Program (DPP): description of lifestyle intervention. <em>Diabetes Care</em> 2002;25(12):2165–2171.
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1282458/" rel="noopener">NIH/PMC1282458</a></li>
+      <li id="r4">Knowler WC, Barrett-Connor E, Fowler SE, et al. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. <em>N Engl J Med</em> 2002;346(6):393–403.</li>
+      <li id="r5">American Diabetes Association Professional Practice Committee. Diagnosis and Classification of Diabetes: <em>Standards of Care in Diabetes</em>. <em>Diabetes Care</em> (current edition, Section 2).</li>
+      <li id="r6">Mayo Clinic. <em>Prediabetes: Symptoms and causes</em>.
+        <a href="https://www.mayoclinic.org/diseases-conditions/prediabetes/symptoms-causes/syc-20355278" rel="noopener">mayoclinic.org</a></li>
+    </ol>
+  </section>
+
+  <footer>Educational content for general awareness. It is not a diagnosis or medical advice. Please talk to a qualified health professional about your results.</footer>
+</main>
+</body>
+</html>
