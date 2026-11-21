@@ -1,0 +1,43 @@
+{
+  "scenes": [
+    {"id": "hook", "title": "Your score", "sentences": [
+      "If your score is 5 or higher, you are at high risk of developing prediabetes.",
+      "That means your blood sugar may already be creeping up.",
+      "Let's see what that means."
+    ]},
+    {"id": "prevalence", "title": "How common it is", "sentences": [
+      "Prediabetes is very common.",
+      "About 98 million adults in the United States have it. That's more than one in three.",
+      "And most of them don't know.",
+      "The risk score runs from zero to ten. Five or higher is the high-risk zone."
+    ]},
+    {"id": "insulin", "title": "What happens inside", "sentences": [
+      "Here's what's going on inside your body.",
+      "Insulin works like a key. It opens the doors of your cells, so sugar from your food can get in and give you energy.",
+      "With insulin resistance, the locks get stuck, and your cells stop listening.",
+      "Your body makes even more insulin, to push harder.",
+      "Over time it can't keep up, and sugar builds up in your blood. That is prediabetes."
+    ]},
+    {"id": "risk", "title": "What raises your score", "sentences": [
+      "Your score adds up things that make diabetes more likely.",
+      "Getting older. Having a parent, brother or sister with diabetes. Carrying extra weight. Not being very active.",
+      "High blood pressure. Diabetes during a past pregnancy. Unhealthy cholesterol. Or a condition called P C O S.",
+      "The more of these that apply to you, the higher your score."
+    ]},
+    {"id": "diagnostics", "title": "The blood tests", "sentences": [
+      "Only a blood test can tell you for sure. Doctors check three numbers.",
+      "First, fasting sugar, after eight hours without food. Under 100 is normal. 100 to 125 is prediabetes. 126 or more is diabetes.",
+      "Second, A1C, your average sugar over three months. Under 5.7 percent is normal. 5.7 to 6.4 is prediabetes. 6.5 or more is diabetes.",
+      "Third, a sugary drink test, checked two hours later. Under 140 is normal. 140 to 199 is prediabetes. 200 or more is diabetes."
+    ]},
+    {"id": "prevention", "title": "The good news", "sentences": [
+      "Now, the good news. Prediabetes can often be reversed.",
+      "In a big study, lifestyle changes cut the chance of getting type 2 diabetes by fifty-eight percent.",
+      "People lost about seven percent of their weight.",
+      "And walked briskly for about 150 minutes a week. That's half an hour, five days a week.",
+      "Eat more vegetables and whole grains, and drink fewer sugary drinks.",
+      "If your score is 5 or higher, ask your doctor for a blood test.",
+      "This video is for learning, not diagnosis. Sources are listed on screen and on the page."
+    ]}
+  ]
+}

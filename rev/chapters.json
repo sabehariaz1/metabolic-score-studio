@@ -1,0 +1,32 @@
+[
+ {
+  "id": "hook",
+  "title": "Your score",
+  "start": 0.0
+ },
+ {
+  "id": "prevalence",
+  "title": "How common it is",
+  "start": 15.3
+ },
+ {
+  "id": "insulin",
+  "title": "What happens inside",
+  "start": 36.0
+ },
+ {
+  "id": "risk",
+  "title": "What raises your score",
+  "start": 68.8
+ },
+ {
+  "id": "diagnostics",
+  "title": "The blood tests",
+  "start": 96.2
+ },
+ {
+  "id": "prevention",
+  "title": "The good news",
+  "start": 133.7
+ }
+]
