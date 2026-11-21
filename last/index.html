@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metabolic Score Studio</title>
+<style>
+:root{--bg:#F4FAFF;--bg2:#EAF4FA;--card:#fff;--line:#D7EAF5;--coral:#E05244;--teal:#0E7C7B;--amber:#F09D24;--ink:#17324D;--sub:#4F6B82}
+*{box-sizing:border-box}
+body{margin:0;font:18px/1.55 "Trebuchet MS","Segoe UI",Verdana,sans-serif;color:var(--ink);background:linear-gradient(160deg,var(--bg),var(--bg2));min-height:100vh}
+main{max-width:980px;margin:0 auto;padding:48px 20px 72px}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px}
+h2{font-size:1.6rem;margin:0 0 12px}
+.hero{display:flex;gap:32px;align-items:center;flex-wrap:wrap;margin-bottom:40px}
+.hero>div{flex:1 1 380px}
+.hero svg{flex:0 0 260px;max-width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:36px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:24px;margin-bottom:20px}
+.grid .card{margin:0}
+.zone{border-left:10px solid;padding-left:12px;margin:10px 0;font-weight:700}
+.zone span{display:block;font-weight:400;color:var(--sub)}
+.big{font-size:1.5rem;font-weight:800;color:var(--amber)}
+ul{padding-left:22px;margin:8px 0}
+a{color:var(--teal);font-weight:700;overflow-wrap:anywhere}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.hero svg{animation:rise .9s cubic-bezier(.2,1.3,.4,1) both}.card{animation:rise .7s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}}
+.note{color:var(--sub);font-size:.95rem}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+<div>
+<h1>If your score is 5 or higher, you are at high risk of developing prediabetes.</h1>
+<p>Read the quick facts below, then talk to your doctor about a simple blood test.</p>
+</div>
+<svg viewBox="0 0 520 520" role="img" aria-label="Blood drop and glucose meter">
+<circle cx="260" cy="260" r="240" fill="#EAF4FA"/>
+<rect x="320" y="150" width="170" height="290" rx="34" fill="#fff" stroke="#0E7C7B" stroke-width="6"/>
+<rect x="342" y="180" width="126" height="90" rx="14" fill="#E3F5F4"/>
+<text x="405" y="244" font-size="54" font-weight="800" fill="#0E7C7B" text-anchor="middle">5+</text>
+<rect x="372" y="100" width="66" height="60" rx="8" fill="#fff" stroke="#D7EAF5" stroke-width="4"/>
+<circle cx="405" cy="360" r="26" fill="#E05244"/>
+<g transform="rotate(-35 140 340)"><rect x="30" y="310" width="200" height="62" rx="31" fill="#F6C6A5"/></g>
+<path d="M262 225C262 225 228 268 228 290a34 34 0 0 0 68 0C296 268 262 225 262 225Z" fill="#E05244"/>
+</svg>
+</section>
+
+<section class="grid">
+<div class="card">
+<h2>Prediabetes is common, and often silent</h2>
+<p>Most people with prediabetes do not know it. A simple check can catch it early.</p>
+<div class="zone" style="border-color:#0E7C7B">Normal<span>Fasting blood sugar under 100 mg/dL (5.5 mmol/L)</span></div>
+<div class="zone" style="border-color:#F09D24">Prediabetes<span>100 to 125 mg/dL (5.6 to 6.9 mmol/L)</span></div>
+<div class="zone" style="border-color:#E05244">Diabetes<span>126 mg/dL or more</span></div>
+</div>
+<div class="card">
+<h2>Insulin is a key</h2>
+<p>Insulin lets sugar into your cells. When the lock sticks, sugar stays in your blood. This is called insulin resistance.</p>
+</div>
+<div class="card">
+<h2>What raises your score?</h2>
+<ul><li>Age 45 or older</li><li>Extra body weight</li><li>Family history of diabetes</li><li>Little exercise</li><li>High blood pressure</li><li>Diabetes during pregnancy</li></ul>
+</div>
+</section>
+
+<section class="card">
+<h2>A blood test gives a clear answer</h2>
+<p><span class="big">100 to 125 mg/dL (5.6 to 6.9 mmol/L)</span> fasting blood sugar</p>
+<p><span class="big">5.7% to 6.4%</span> A1C (3-month average)</p>
+<p><span class="big">140 to 199 mg/dL (7.8 to 11.0 mmol/L)</span> 2-hour sugar test</p>
+</section>
+
+<section class="card">
+<h2>Good news: you can lower your risk</h2>
+<ul><li>Move 150 minutes a week</li><li>Eat more whole foods</li><li>Lose 5 to 7% of body weight if you carry extra</li></ul>
+<p class="note">Not medical advice. Talk to your doctor.</p>
+</section>
+
+<section class="card">
+<h2>References</h2>
+<ul>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/diabetes">WHO: Diabetes fact sheet</a></li>
+<li><a href="https://www.nice.org.uk/guidance/ph38">NICE: Preventing type 2 diabetes (PH38)</a></li>
+<li><a href="https://diabetesatlas.org">IDF Diabetes Atlas</a></li>
+<li><a href="https://www.nhs.uk/conditions/type-2-diabetes/">NHS: Type 2 diabetes</a></li>
+</ul>
+</section>
+</main>
+</body>
+</html>
