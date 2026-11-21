@@ -1,109 +1,35 @@
 import React from 'react';
-import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
-import {C, FONT, prog} from './theme';
-
-const R = 200;
-const CIRC = 2 * Math.PI * R;
-
-const LINES: ReadonlyArray<{t: string; c: string}> = [
-  {t: 'If your score is', c: C.white},
-  {t: '5 or higher,', c: C.coral},
-  {t: 'you are at high risk of', c: C.white},
-  {t: 'developing prediabetes.', c: C.amber},
-];
+import {interpolate, useCurrentFrame} from 'remotion';
+import {C, Scene, useIn} from './ui';
 
 export const ScoreHookScene: React.FC = () => {
   const frame = useCurrentFrame();
-  const p = interpolate(frame, [8, 85], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    easing: Easing.inOut(Easing.cubic),
-  });
-  const n = Math.round(5 * p);
-  const pulse = frame > 95 ? ((frame - 95) % 70) / 70 : 0;
-  const labelA = prog(frame, 4, 20);
-
+  const drop = interpolate(frame, [20, 70], [-40, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const text = useIn(0);
+  const art = useIn(8);
   return (
-    <AbsoluteFill
-      style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 110, fontFamily: FONT}}
-    >
-      <div style={{position: 'relative', width: 520, height: 520}}>
-        <svg width={520} height={520} viewBox="0 0 520 520">
-          <circle cx={260} cy={260} r={R} fill="none" stroke="rgba(255,255,255,0.09)" strokeWidth={30} />
-          <circle
-            cx={260}
-            cy={260}
-            r={R}
-            fill="none"
-            stroke="rgba(239,71,111,0.22)"
-            strokeWidth={62}
-            strokeDasharray={CIRC}
-            strokeDashoffset={CIRC * (1 - p)}
-            transform="rotate(-90 260 260)"
-          />
-          <circle
-            cx={260}
-            cy={260}
-            r={R}
-            fill="none"
-            stroke={C.coral}
-            strokeWidth={30}
-            strokeLinecap="round"
-            strokeDasharray={CIRC}
-            strokeDashoffset={CIRC * (1 - p)}
-            transform="rotate(-90 260 260)"
-          />
-          {frame > 95 ? (
-            <circle
-              cx={260}
-              cy={260}
-              r={R + 24 + pulse * 56}
-              fill="none"
-              stroke={C.coral}
-              strokeWidth={4}
-              opacity={(1 - pulse) * 0.55}
-            />
-          ) : null}
-        </svg>
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div style={{color: C.muted, fontSize: 28, fontWeight: 700, letterSpacing: 3, opacity: labelA}}>
-            YOUR RISK SCORE
-          </div>
-          <div style={{color: C.white, fontSize: 190, fontWeight: 700, lineHeight: 1.05}}>
-            {p >= 0.999 ? '5+' : String(n)}
-          </div>
+    <Scene caption="Take the 1-minute risk test">
+      <div style={{flex: 1, display: 'flex', alignItems: 'center', gap: 70}}>
+        <div style={{flex: 1.25, fontSize: 78, fontWeight: 800, lineHeight: 1.15, ...text}}>
+          If your score is 5 or higher, you are at high risk of developing prediabetes.
+        </div>
+        <div style={{flex: 1, height: 620, ...art}}>
+          <svg viewBox="0 0 520 520" width="100%" height="100%">
+            <circle cx="260" cy="260" r="240" fill={C.bg2} />
+            <g transform="translate(0 0)">
+              <rect x="320" y="150" width="170" height="290" rx="34" fill="#fff" stroke={C.teal} strokeWidth="6" />
+              <rect x="342" y="180" width="126" height="90" rx="14" fill="#E3F5F4" />
+              <text x="405" y="244" fontSize="54" fontWeight="800" fill={C.teal} textAnchor="middle">5+</text>
+              <rect x="372" y="100" width="66" height="60" rx="8" fill="#fff" stroke={C.border} strokeWidth="4" />
+              <circle cx="405" cy="360" r="26" fill={C.coral} />
+            </g>
+            <g transform="rotate(-35 140 340)">
+              <rect x="30" y="310" width="200" height="62" rx="31" fill="#F6C6A5" />
+            </g>
+            <path transform={`translate(0 ${drop})`} d="M262 225 C262 225 228 268 228 290 a34 34 0 0 0 68 0 C296 268 262 225 262 225 Z" fill={C.coral} />
+          </svg>
         </div>
       </div>
-
-      <div>
-        {LINES.map((l, i) => {
-          const a = prog(frame, 8 + i * 10, 20);
-          return (
-            <div
-              key={l.t}
-              style={{
-                color: l.c,
-                fontSize: 68,
-                fontWeight: 700,
-                lineHeight: 1.18,
-                opacity: a,
-                transform: `translateX(${(1 - a) * 50}px)`,
-              }}
-            >
-              {l.t}
-            </div>
-          );
-        })}
-      </div>
-    </AbsoluteFill>
+    </Scene>
   );
 };
